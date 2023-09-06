@@ -11,7 +11,7 @@ const Hero = () => {
             alt="sumz_logo"
             className="object-contain h-10 w-auto"
           />
-          <h1 className="text-2xl font-bold cursor-pointer ml-2">Summify</h1>
+          <h1 className="text-2xl font-bold cursor-pointer ml-2">SummAIze</h1>
         </div>
         <button
           type="button"
