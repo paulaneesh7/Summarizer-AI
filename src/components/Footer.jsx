@@ -5,9 +5,9 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-white rounded-lg shadow-md m-4 dark:bg-gray-800 w-full lg:w-[1400px] font-satoshi">
+    <footer className="bg-white rounded-lg shadow-md m-4 w-full lg:w-[1250px] font-satoshi">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <span className="text-sm text-gray-500 sm:text-center">
           © {year} . All Rights Reserved |{" "}
           <span>
             Made with 🧠 by{" "}
@@ -21,11 +21,11 @@ const Footer = () => {
             <span className="font-bold text-teal-500">
               {" "}
               Give it a ⭐ on
-              <a href="/" className="cursor-pointer hover:underline" target="_blank"> GitHub</a>
+              <a href="https://github.com/paulaneesh7/Summarizer-AI" className="cursor-pointer hover:underline" target="_blank"> GitHub</a>
             </span>
           </span>
         </span>
-        <ul className="flex flex-wrap gap-4 items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <ul className="flex flex-wrap gap-4 items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
           <li>
             <a href="mailto:aneesh16117@gmail.com" target="_blank">
               <BiLogoGmail size={40} className="hover:scale-110 duration-300" />
