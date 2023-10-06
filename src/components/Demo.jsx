@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { copy, loader, tick } from "../assets/index";
 import { useLazyGetSummaryQuery } from "../services/article";
+import { useSnackbar } from "notistack";
+
 
 const Demo = () => {
   const [article, setArticle] = useState({
@@ -13,6 +15,8 @@ const Demo = () => {
   const [copied, setCopied] = useState("");
 
   const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+  const { enqueueSnackbar } = useSnackbar();
+
 
   useEffect(() => {
     const articlesFromLocalStorage = JSON.parse(
@@ -44,6 +48,7 @@ const Demo = () => {
   const handleCopy = (copyUrl) => {
     setCopied(copyUrl);
     navigator.clipboard.writeText(copyUrl);
+    enqueueSnackbar("copied To Clipboard 😎", { variant: "success" });
     setTimeout(() => setCopied(false), 3000);
   };
 
@@ -104,13 +109,13 @@ const Demo = () => {
             </div>
           </div>
         )} */}
-        {copied && (
+        {/* {copied && (
           <div className="fixed inset-0 flex items-center justify-center z-50 mb-10">
             <div className="bg-white border border-gray-300 p-2 rounded-lg shadow-md font-satoshi text-orange-500 font-bold">
               ✅ Copied to Clipboard! 🥳
             </div>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Display Results */}
